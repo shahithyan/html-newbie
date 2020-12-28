@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Image</title>
+        <style>
+            .imgSizeSmall{
+                width:250px; 
+                height: 250px;
+                border:2px dashed blue ;
+                padding: 20px 30px 40px 50px;
+                box-sizing: content-box                
+            }
+            .imgSizeLarge{
+                width:500px; 
+                height: 300px;
+                border: 2px dashed blue;
+                padding: 20px;
+                margin: 20px 30px 40px 50px;
+                box-sizing: border-box;
+            }
+            img:hover{
+                border: 9px solid green ;
+            }
+            p{
+                border:5px dashed darkblue;
+                background-color: lightblue;
+                width: 250px;
+                background-clip: content-box;
+                padding: 5px;
+                
+            }
+            body{
+background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            }
+            h2{
+                background: #1E9600;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                color: lightskyblue;
+                background-image: linear-gradient(red, yellow, green);
+                display:inline;           
+}
+            h1{
+                background: #C6FFDD;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: inline
+
+;
+            }              
+       </style>
+    </head>
+
+    <body>
+        <h2>Shahithyan and Darshan</h2>
+        <p><b>Bull shark</b></p>
+        <figure>
+            <img class="imgSizeLarge" src="./../pictures/shark.jpg" alt="A type of shark">
+            <figcaption>This is a Bull shark</figcaption>
+        </figure>
+        <p><b>Best Brothers in the whole world</b></p>
+        <img class="imgSizeSmall" src="./../pictures/ShahiDarsi.jpg" alt="Shahithyan and Darshan">
+        <h1>I AM H2.</h1>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DropDown</title>
+    </head>
+    <script>
+        function showPokemon() {
+            var pokemon = document.getElementById("pokemon");
+            var pokemonName = pokemon.value;
+            
+            var img = document.getElementById("pokemonImg");
+
+            if(pokemonName == "Charmeleon") {
+                img.src = "./../pictures/charmeleon.jpg";
+            }
+            
+            if(pokemonName == "Charizard") {
+                img.src = "./../pictures/charizad.jpg";
+            }
+            
+           if(pokemonName == "Charmander") {
+               img.src = "./../pictures/charmander.jpg";
+           }
+        }
+    </script>
+    <style>
+        body{
+            background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        #pokemonImg{
+            width: 300px;
+            height: 300px;
+        } 
+    </style>
+    <body>  
+        <form>
+            <label for="pokemon">Choose a Pokemon:</label>
+            <select name="pokemon" id="pokemon">
+                <option value="Charmander">Charmander</option>
+                <option value="Charmeleon">Charmeleon</option>
+                <option value="Charizard">Charizard</option>
+            </select>
+            <br><br>
+            <input type="button" value="submit" onclick="showPokemon()">
+        </form>
+        <br><br>
+        <img src ="./../pictures/charmander.jpg" id="pokemonImg">
+    </body>
+</html>
