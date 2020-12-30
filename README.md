@@ -1,2 +1,2 @@
 # html-newbie
-Learning HTML,CSS, and JAVASCRIPT.3
+Learning HTML,CSS, and JAVASCRIPT
