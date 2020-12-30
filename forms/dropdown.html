@@ -36,13 +36,12 @@
     <body>  
         <form>
             <label for="pokemon">Choose a Pokemon:</label>
-            <select name="pokemon" id="pokemon">
+            <select name="pokemon" id="pokemon" onchange="showPokemon()">
                 <option value="Charmander">Charmander</option>
                 <option value="Charmeleon">Charmeleon</option>
                 <option value="Charizard">Charizard</option>
             </select>
             <br><br>
-            <input type="button" value="submit" onclick="showPokemon()">
         </form>
         <br><br>
         <img src ="./../pictures/charmander.jpg" id="pokemonImg">
