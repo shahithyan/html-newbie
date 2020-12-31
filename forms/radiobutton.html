@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>beyblade</title>
+    </head>
+    <style>
+        label{
+            background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        body{
+            background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        #beyblade{
+            height: 500px;
+        }
+    </style>
+    <script>
+        function showBeyblade() {
+            var worldSpryzen = document.getElementById("worldSpryzen").checked;
+            var img = document.getElementById("beyblade");
+
+            if(worldSpryzen) {
+                img.src = "./../pictures/spryzen.jpg";
+            }
+            var braveValtreyk = document.getElementById("braveValtreyk").checked
+
+            if(braveValtreyk) {
+                img.src ="./../pictures/Valtreyk.jpg"
+            }
+            var tempestDragon = document.getElementById("tempestDragon").checked
+
+            if(tempestDragon) {
+                img.src ="./../pictures/dragon.jpg"
+            }
+        }
+    </script>
+    <body>
+        <form>
+            <h1>Select beyblade:</h1>
+
+            <input type="radio" id="worldSpryzen" name="beyblade" value="World Spryzen"> World Spryzen 
+            <br>
+            <input type="radio" id="braveValtreyk" name="beyblade" value="Brave Valtreyk"> Brave Valtreyk
+            <br>
+            <input type="radio" id="tempestDragon" name="beyblade" value="Tempest Dragon"> Tempest Dragon
+            <br><br>
+
+            <input type="button" value="submit" onclick="showBeyblade()">
+            <br><br>
+            <Img id="beyblade">
+        </form>
+    </body>
+</html>
