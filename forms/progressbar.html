@@ -1,19 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Progress</title>
-        <link rel="stylesheet" type="text/css" href="./../css/style.css">
-    </head>
-    <style>
-        h1{
-            text-align: center;
-        }
-    </style>
-    <body>
-        <h1>Progress bar</h1>
-        <div>
-            <label for="test">Testing</label>
-            <progress id="test" value="0" max="100"></progress>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Progress</title>
+            <link rel="stylesheet" type="text/css" href="./../css/style.css">
+        </head>
+        <script src="./../js/progressbar.js"></script>
+        <style>
+            h1{
+                text-align: center;
+            }
+            .bar{
+                margin-left: 540px;
+            }
+            
+        </style>
+        <body>
+            <h1>Progress bar</h1>
+            <div class="bar">
+                <label for="test"><strong>Testing:</strong></label>
+                <progress id="test" value="0" max="100"></progress><br><br>
+            <button onclick="progress()">Start</button>
         </div>
     </body>
 </html>
