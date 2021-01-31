@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./../css/style.css">
+        <title>Login page</title>
+    </head>
+    <script>
+        function login(){
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+            
+            if(userName !== "pokemon"){
+                document.getElementById("loginFailure").style.display = "block";
+                document.getElementById("loginSuccessful").style.display = "none";
+            } else if(password !== "Mewtwo"){
+                document.getElementById("loginFailure").style.display = "block";
+                document.getElementById("loginSuccessful").style.display = "none";
+            } else {
+                document.getElementById("loginFailure").style.display = "none";
+               document.getElementById("loginSuccessful").style.display = "block";
+            }
+        } 
+    </script>
+    <style>
+    #login{
+        margin-left: 500px;
+        margin-top: 200px;
+    }
+    #loginFailure{
+        display: none;
+        background-color: red;
+        width: fit-content;
+    }
+    #loginSuccessful {
+        display: none;
+        background-color: green;
+        width: fit-content;
+    }
+    </style>
+    <body>
+        <div id="login">
+            <p id="loginFailure">Username or password is wrong.</p>
+            <p id="loginSuccessful">login is successful</p>
+            <form>
+                <label for="userName">USERNAME</label>
+                <input type="text" id="userName" name="userName"><br><br>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="button" onclick="login()" value="login">
+            </form>
+        </div>
+    </body>
+</html>
