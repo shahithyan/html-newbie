@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./../css/style.css">
+        <style>
+            #question{
+               margin-left: 100px; 
+            }
+            h1 {
+                text-align: center;
+            }
+            #summary{
+                margin-left: 100px;
+                display: none;
+            }
+            #correct{
+                display: none;
+                background-color: green;
+            }
+            #incorrect{
+                display: none;
+                background-color: red;
+            }
+        </style>
+        <script>
+            function submit(){
+                var pele = document.getElementById("q1answer1").checked;
+                var score = 0;
+                document.getElementById("summary").style.display = "block";
+
+                if(pele){
+                    document.getElementById("correct").style.display ="inline";
+                    score++;
+                }else{
+                    document.getElementById("incorrect").style.display ="inline";
+                }
+                document.getElementById("question").style.display = "none";
+                document.getElementById("score").innerHTML ="<strong>Score:</strong>" + score + "/1";
+
+            }
+        </script>
+        <title> SPORT QUIZ</title>
+
+        
+    </head>
+    <body>
+        <h1>START THE QUIZ!!!!!!!!!!</h1>
+        <div id="question">
+            <p>Who is the best soccer player in history?<p>
+            <input type="radio" id="q1answer1" name="answer" value="Pelé"> Pelé 
+            <input type="radio" id="q2answer2" name="answer" value="Maradona"> Maradona <br><br>
+            <button onclick="submit()" id="test">Submit</button>
+        </div> 
+
+        <div id="summary">
+            <p id="score"></p>
+            <p><b>Answers:</b></p>
+            <p>1) Who is the best soccer player in history? : <span id="incorrect">Incorrect</span><span id="correct">Correct</span> </p>
+        </div>
+    </body>
+</html>
