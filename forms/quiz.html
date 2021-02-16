@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="./../css/style.css">
         <style>
             #question{
-               margin-left: 100px; 
+               margin-left: 100px;
             }
             h1 {
                 text-align: center;
@@ -13,13 +13,17 @@
                 margin-left: 100px;
                 display: none;
             }
-            #correct{
-                display: none;
+            #q1correct, #q2correct, #q3correct, #q4correct, #q5correct{
+                display:none;
                 background-color: green;
             }
-            #incorrect{
+            #q1incorrect, #q2incorrect, #q3incorrect, #q4incorrect, #q5incorrect{
+                display:none;
+                background-color: red;   
+            }
+            #q1notAnswered, #q2notAnswered, #q3notAnswered, #q4notAnswered, #q5notAnswered  {
+                background-color: yellow;
                 display: none;
-                background-color: red;
             }
         </style>
         <script>
@@ -27,35 +31,127 @@
                 var pele = document.getElementById("q1answer1").checked;
                 var score = 0;
                 document.getElementById("summary").style.display = "block";
-
-                if(pele){
-                    document.getElementById("correct").style.display ="inline";
+                document.getElementById("question").style.display = "none";
+                var q1Checked = document.querySelector('input[name = "question1"]:checked');
+                var q2Checked = document.querySelector('input[name = "question2"]:checked');
+                var q3Checked = document.querySelector('input[name = "question3"]:checked');
+                var q4Checked = document.querySelector('input[name = "question4"]:checked');
+                var q5Checked = document.querySelector('input[name = "question5"]:checked');
+                
+                if(q1Checked === null){
+                    document.getElementById("q1notAnswered").style.display = "inline";
+                }else if(pele){
+                    document.getElementById("q1correct").style.display ="inline";
                     score++;
                 }else{
-                    document.getElementById("incorrect").style.display ="inline";
+                    document.getElementById("q1incorrect").style.display ="inline";
                 }
-                document.getElementById("question").style.display = "none";
-                document.getElementById("score").innerHTML ="<strong>Score:</strong>" + score + "/1";
 
+                var Uruguay = document.getElementById("q2answer2").checked
+                if(q2Checked === null){
+                    document.getElementById("q2notAnswered").style.display = "inline";
+                }else if(Uruguay){
+                    document.getElementById("q2correct").style.display ="inline";
+                    score++;
+                } else{
+                    document.getElementById("q2incorrect").style.display ="inline";
+               
+                }
+                var July = document.getElementById("q3answer1").checked
+                if(q3Checked === null){
+                    document.getElementById("q3notAnswered").style.display = "inline";
+                }else if(July){
+                    document.getElementById("q3correct").style.display = "inline";
+                    score++
+                } else{
+                    document.getElementById("q3incorrect").style.display = "inline";
+                }
+                
+                var oct = document.getElementById("q4answer1").checked
+                if(q4Checked === null){
+                    document.getElementById("q4notAnswered").style.display = "inline";
+                }else if(oct){
+                    document.getElementById("q4correct").style.display = "inline";
+                    score++
+                } else{
+                    document.getElementById("q4incorrect").style.display = "inline";
+                }
+
+                var liverpool = document.getElementById("q5answer1").checked
+                if(q5Checked === null){
+                    document.getElementById("q5notAnswered").style.display = "inline";
+                }else if(liverpool){
+                    document.getElementById("q5correct").style.display = "inline";
+                    score++
+                } else{
+                    document.getElementById("q5incorrect").style.display = "inline";
+                }
+                document.getElementById("score").innerHTML ="<strong>Score:</strong>" + score + "/5";
             }
         </script>
-        <title> SPORT QUIZ</title>
+        <title> SOCCER QUIZ</title>
 
         
     </head>
     <body>
         <h1>START THE QUIZ!!!!!!!!!!</h1>
         <div id="question">
-            <p>Who is the best soccer player in history?<p>
-            <input type="radio" id="q1answer1" name="answer" value="Pelé"> Pelé 
-            <input type="radio" id="q2answer2" name="answer" value="Maradona"> Maradona <br><br>
+            <p><strong> the best soccer player in history?</strong><p>
+            <input type="radio" id="q1answer1" name="question1" value="Pelé"> Pelé 
+            <input type="radio" id="q1answer2" name="question1" value="Maradona"> Maradona <br><br>
+
+            <p> <strong>Who won the first world soccer cup?</strong></p>
+            <input type="radio" id="q2answer1" name="question2" value="China">China
+            <input type="radio" id="q2answer2" name="question2" value="Uruguay"> Uruguay <br><br>
+
+            <p><strong>When was the first World Cup game</strong></p>
+            <input type="radio" id="q3answer1" name="question3" value="July 13, 1930">July 13, 1930
+            <input type="radio" id="q3answer2" name="question3" value="December 1, 1931"> December 1, 1931 <br><br>
+
+            <p><strong>The FA (Football Association) founded in which year?</strong></p>
+            <input type="radio" id="q4answer1" name="question4" value="26 October 1863">26 October 1863
+            <input type="radio" id="q4answer2" name="question4" value="May 10 1863">May 10 1863  <br><br>
+
+            <p><strong>Who won Champions league in 2019?</strong></p>
+            <input type="radio" id="q5answer1" name="question5" value="liverpool">liverpool
+            <input type="radio" id="q5answer2" name="question5" value="barcelona">barcelona <br><br>
+
             <button onclick="submit()" id="test">Submit</button>
-        </div> 
+        </div>
+        
 
         <div id="summary">
             <p id="score"></p>
             <p><b>Answers:</b></p>
-            <p>1) Who is the best soccer player in history? : <span id="incorrect">Incorrect</span><span id="correct">Correct</span> </p>
+            <p>1) Who is the best soccer player in history? :
+                <span id="q1incorrect">Incorrect</span>
+                <span id="q1correct">Correct</span>
+                <span id="q1notAnswered">Not answered</span>
+            </p>
+            <p>2) Who won the first soccer world cup? : 
+                <span id="q2correct">Correct</span> 
+                <span id="q2incorrect">Incorrect</span>
+                <span id="q2notAnswered">Not answered</span>
+            </p>
+            <p>
+                3) When was the first World Cup game? :
+                <span id="q3correct">Correct</span>
+                <span id="q3incorrect">Incorrect</span>
+                <span id="q3notAnswered">Not answered</span>
+            </p>
+            <p>
+                4)The FA (Football Association) founded in which year? : 
+                <span id="q4correct">Correct</span>
+                <span id="q4incorrect">Incorrect</span>
+                <span id="q4notAnswered">Not answered</span>
+            </p>
+            <p>
+                5)Who won Champions league in 2019? : 
+                <span id="q5correct">Correct</span>
+                <span id="q5incorrect">Incorrect</span>
+                <span id="q5notAnswered">Not answered</span>
+            </p>
         </div>
+
     </body>
 </html>
