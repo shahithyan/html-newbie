@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>queryselectorall</title>
+        <link rel="stylesheet" href="./../css/style.css">
+    </head>
+    <script>
+        function color() {
+            var change, i;
+            change = document.querySelectorAll(".green");
+            for(i = 0; i < change.length; i++) {
+                change[i].style.background = "red";
+                change[i].style.width = "fit-content";
+            }
+        }
+    </script>
+    <body>
+        <h1 class="green">This is going to have a background!!</h1>
+        <h1 class="green">This is going to have a background!!</h2>
+        <h1 class="green">This is going to have a background!!</h3>
+        <h1 class="green">This is going to have a background!!</h4>
+        <h1 class="green">This is going to have a background!!</h5>
+        <h1 class="green">This is going to have a background!!</h6>
+        <button onclick="color()">Click!!!!!!!!!!!!</button>
+        
+    </body>
+</html>
