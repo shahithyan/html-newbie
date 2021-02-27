@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./../css/style.css">
+        <style>
+            button{
+                cursor: pointer;
+            }
+        </style>
+        <title>TV SHOWS</title>
+    </head>
+    <script>
+        function img(){
+            window.location.href = "./bakuganresult.html"
+        }
+        function surge(){
+            window.location.href = "./surgeresult.html"
+        }
+        function pokemon(){
+            window.location.href = "./pokeresult.html"
+        }
+        
+    </script>
+    <body>
+        <h1>Click an Image to see the image of the main character!</h1>
+        <button onclick="img()" id="image"><img src="./../pictures/bakugan.jpg"></button>
+        <button onclick="surge()" id="surge"><img src="./../pictures/surge.jpg"></button>
+        <button onclick= "pokemon()" class="pokemon" ><img src="./../pictures/pokemon.jpg" alt="pokemon" width="200"></button>
+    </body>
+</html>
