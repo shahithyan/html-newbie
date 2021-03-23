@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enter</title>
+    </head>
+    <body>
+        <h3> Type hello and then press enter</h3>
+        <input id="myInput">
+        <button id="myBtn" onclick="enter()">Click me</button>
+    </body>
+
+    <script>
+        var input = document.getElementById("myInput");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("myBtn").click();
+            }
+        });
+
+        function enter(){
+            alert("test");
+        }
+    </script>
+</html>
