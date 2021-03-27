@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What key did you press</title>
+        <link rel="stylesheet" href="./../css/style.css">
+    </head>
+    <script>
+        function key(){
+            var key = event.key;
+            document.getElementById("text").innerHTML = "The key you pressed was :" + key
+        }
+    </script>
+    <body>
+        <h2>Press a key on your keyboard.</h2>
+        <input type="text" size="40" onkeydown="key()">
+        <p id="text"></p>
+    </body>
+</html>
