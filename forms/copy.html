@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Copy text</title>
+        <link rel="stylesheet" href="./../css/style.css">
+    </head>
+    <body>
+        <h1>Type text than click then button.</h1>
+        <input id="copy">
+        <button onclick="copy()">Click</button>
+
+        <script>
+            function copy() {
+                var copyText = document.getElementById("copy");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999)
+                document.execCommand("copy");
+                alert("You copied the text.")
+            }
+        </script>
+    </body>
+</html>
