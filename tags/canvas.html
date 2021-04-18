@@ -8,12 +8,49 @@
         window.addEventListener("load", function() {
             var canvas = document.getElementById("myCanvas2D");
             var ctx = canvas.getContext("2d");
-            ctx.fillStyle = "#FFD700"
-            ctx.fillRect(0, 1, 8000, 1000); 
+            var x = 0;
+            var y = 0;
+            drawTriangle();
+
+            function drawTriangle() {
+                ctx.clearRect(0, 0, 500, 500);
+                ctx.beginPath();
+                ctx.moveTo(200 + x, 100 + y);
+                ctx.lineTo(170 + x, 150 + y);
+                ctx.lineTo(230 + x, 150 + y);
+                ctx.closePath();
+
+                ctx.lineWidth = 10;
+                ctx.stroke();
+
+                ctx.fillStyle = "rgba(255, 204, 0, 1)";
+                ctx.fill();
+            }
+
+            window.addEventListener("keydown", move);
+
+            function move(e) {
+                switch(e.keyCode) {
+                    case 37:
+                        x -= 2;
+                        break;
+                    case 38:
+                        y -= 2;
+                        break;
+                    case 39:
+                        x += 2;
+                        break;
+                    case 40:
+                        y += 2;
+                        break;
+                }
+                drawTriangle();
+            }
+
         });
     </script>
     <body>
         <h1>2D</h1>
-        <canvas id="myCanvas2D">I am a 2D canvas.</canvas> 
+        <canvas id="myCanvas2D" width="500" height="500" style="border:1px solid #d3d3d3;">I am a 2D canvas.</canvas> 
     </body>
 </html>
