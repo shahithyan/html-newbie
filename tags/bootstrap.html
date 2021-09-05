@@ -2,13 +2,66 @@
 <html>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="./../css/style.css">
+        <style>
+            #color {
+                width: fit-content;
+            }
+        </style>
         <title>Bootstrap</title>
     </head>
     <body>
+        <p class = "lead">HELLO!!!!!!!!!!!👋👋</p>
+        <p> Bootstrap class lead.</p>
+        <hr>
+
         <p class="container">Hello world! (class container moves text to the middle.)</p>
-        <img src="./../pictures/dan.jpg" class="img-thumbnail">
-        <figcaption>Img-thumbnail makes an outline around the picture.</figcaption>
-        <img src="./../pictures/Hikaru.jpg" width="200px" class="rounded float-start">
-        <figcaption>Rounded float-start makes the picture's edges round</figcaption>
+        <p> Bootstrap class container.</p>
+        <hr>
+
+       <center>
+           <img src="./../pictures/dan.jpg" class="img-thumbnail">
+            <figcaption>Img-thumbnail makes an outline around the picture.</figcaption>
+
+        <img src="./../pictures/Hikaru.jpg" width="200px" class="rounded">
+            <figcaption>Rounded float-start makes the picture's edges round</figcaption>
+            <p>Bootsrap classes: img-thumbnail, rounded float-start and, clearfix</p>
+        </center>
+
+        <div class="clearfix"></div>
+        <hr>
+        <p style="text-align: center;">SHAHITHYAN-before</p>
+        <p style="text-align: center;" class= "text-lowercase">SHAHITHYAN</p>
+        <p style="text-align: center;">darshan-before</p>
+        <p style="text-align: center;" class="text-uppercase">darshan</p>
+        <p style="text-align: center;">center-before</p>
+        <p style="text-align: center;" class="text-capitalize">center</p>
+        <p>Bootstrap classes: text-lowercase,text-uppercase and, text-capitalize</p>
+        <hr>
+        <center>
+            <ul type = "circle" class="list-unstyled">
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Plums</li>
+                <li>Orange</li>
+            </ul>
+            <hr>
+            <p class="text-primary">HELLO world 👋👋</p>
+            <p class="text-success">HELLO world 👋👋</p>
+            <p class="text-info">HELLO world 👋👋</p>
+            <p class="text-warning">HELLO world 👋👋</p>
+            <p class="text-danger">HELLO world 👋👋</p>
+            <p class="text-muted">HELLO world 👋👋</p>
+            <p>Bootstrap colors</p>
+            <hr>
+
+            <p class="bg-primary" id="color">HELLO world 👋👋</p>
+            <p class="bg-success" id="color">HELLO world 👋👋</p>
+            <p class="bg-info" id="color">HELLO world 👋👋</p>
+            <p class="bg-warning" id="color">HELLO world 👋👋</p>
+            <p class="bg-danger" id="color">HELLO world 👋👋</p>
+            <p>Bootstrap  backgrounds</p>
+            <hr>
+        </center>
     </body>
 </html>
