@@ -2,13 +2,17 @@
 <html>
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <link rel="stylesheet" href="./../css/style.css">
         <style>
             #color {
                 width: fit-content;
             }
         </style>
         <title>Bootstrap</title>
+        <script>
+            function color() {
+                alert("Hello")
+            } 
+        </script>
     </head>
     <body>
         <p class = "lead">HELLO!!!!!!!!!!!👋👋</p>
@@ -63,5 +67,24 @@
             <p>Bootstrap  backgrounds</p>
             <hr>
         </center>
+        <center><button class="btn btn-default">button</button>
+            <a href="https://www.Goal.com/" class="btn btn-default" role="button" >link</a>
+            <input type="submit" class="btn btn-default" value="submit">
+            <br>
+    
+            <button class="btn btn-primary">primary</button>
+            <button class="btn btn-success">success</button>
+            <button class="btn btn-info">info</button>
+            <button class="btn btn-warning">warning</button>
+            <button class="btn btn-danger">danger</button>
+            <br>
+            
+            <button class="btn btn-default btn-lg">button</button>
+            <button class="btn btn-default btn-sm">button</button>
+            <button class="btn btn-default btn-xs" disabled = "disabled" onclick="color()">button</button>
+    </center>
+        
+        <hr>
+
     </body>
 </html>
